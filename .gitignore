@@ -3,6 +3,7 @@ node_modules/
 
 # Composer
 vendor/
+.idea/
 
 # All zip files
 *.zip
