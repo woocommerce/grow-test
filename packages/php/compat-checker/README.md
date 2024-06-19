@@ -11,15 +11,15 @@ A simple library to run compatibility checks for WooCommerce extensions.
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/woocommerce/grow"
+            "url": "https://github.com/woocommerce/grow-test"
         }
     ],
     "require": {
-        "woocommerce/grow": "dev-compat-checker"
+        "woocommerce/grow-test": "dev-compat-checker"
     }
 }
 ```
-2. Run `composer update` to include the `woocommerce/grow` repo in the `vendor` folder.
+2. Run `composer update` to include the `woocommerce/grow-test` repo in the `vendor` folder.
 
 3. In the main plugin file that contains the plugin header, add the compatibility check like the below example:
 

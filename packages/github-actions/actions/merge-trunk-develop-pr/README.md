@@ -2,7 +2,7 @@
 
 This action provides the following functionality for GitHub Actions users:
 
-- Create a PR to merge `trunk` to `develop` after a release done with the `woocommerce/grow/prepare-extension-release`
+- Create a PR to merge `trunk` to `develop` after a release done with the `woocommerce/grow-test/prepare-extension-release`
 
 ## Usage
 
@@ -24,5 +24,5 @@ jobs:
   automerge_trunk:
     runs-on: ubuntu-latest
     steps:
-      - uses: woocommerce/grow/merge-trunk-develop-pr@actions-v2
+      - uses: woocommerce/grow-test/merge-trunk-develop-pr@actions-v2
 ```

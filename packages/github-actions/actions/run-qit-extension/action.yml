@@ -95,7 +95,7 @@ runs:
 
     - name: Activation test
       if: ${{ inputs.test-activation == 'true' }}
-      uses: woocommerce/grow/run-qit-annotate@actions-v2
+      uses: woocommerce/grow-test/run-qit-annotate@actions-v2
       with:
         type: activation
         extension: ${{ inputs.extension }}
@@ -106,7 +106,7 @@ runs:
 
     - name: Security test
       if: ${{ inputs.test-security == 'true' }}
-      uses: woocommerce/grow/run-qit-annotate@actions-v2
+      uses: woocommerce/grow-test/run-qit-annotate@actions-v2
       with:
         type: security
         extension: ${{ inputs.extension }}
@@ -117,7 +117,7 @@ runs:
 
     - name: PHPStan test
       if: ${{ inputs.test-phpstan == 'true' }}
-      uses: woocommerce/grow/run-qit-annotate@actions-v2
+      uses: woocommerce/grow-test/run-qit-annotate@actions-v2
       with:
         type: phpstan
         extension: ${{ inputs.extension }}
@@ -128,7 +128,7 @@ runs:
 
     - name: API test
       if: ${{ inputs.test-api == 'true' }}
-      uses: woocommerce/grow/run-qit-annotate@actions-v2
+      uses: woocommerce/grow-test/run-qit-annotate@actions-v2
       with:
         type: woo-api
         extension: ${{ inputs.extension }}
@@ -139,7 +139,7 @@ runs:
 
     - name: E2E test
       if: ${{ inputs.test-e2e == 'true' }}
-      uses: woocommerce/grow/run-qit-annotate@actions-v2
+      uses: woocommerce/grow-test/run-qit-annotate@actions-v2
       with:
         type: woo-e2e
         extension: ${{ inputs.extension }}
@@ -150,7 +150,7 @@ runs:
 
     - name: Plugin E2E test
       if: ${{ inputs.test-plugin-e2e == 'true' }}
-      uses: woocommerce/grow/run-qit-annotate@actions-v2
+      uses: woocommerce/grow-test/run-qit-annotate@actions-v2
       with:
         type: e2e
         extension: ${{ inputs.extension }}

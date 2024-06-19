@@ -23,9 +23,9 @@ jobs:
   qit-test:
     name: Run QIT Tests
     runs-on: ubuntu-20.04
-    steps:    
+    steps:
       - name: Delegate QIT Tests
-        uses: woocommerce/grow/run-qit-extension@actions-v2
+        uses: woocommerce/grow-test/run-qit-extension@actions-v2
         with:
           qit-partner-user: ${{ secrets.QIT_PARTNER_USER }}
           qit-partner-secret: ${{ secrets.QIT_PARTNER_SECRET }}

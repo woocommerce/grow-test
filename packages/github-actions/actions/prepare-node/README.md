@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Prepare node
-        uses: woocommerce/grow/prepare-node@actions-v2
+        uses: woocommerce/grow-test/prepare-node@actions-v2
         with:
           node-version: 20
 
@@ -44,7 +44,7 @@ steps:
   - uses: actions/checkout@v4
 
   - name: Prepare node
-    uses: woocommerce/grow/prepare-node@actions-v2
+    uses: woocommerce/grow-test/prepare-node@actions-v2
     with:
       node-version-file: ".nvmrc"
 ```
@@ -57,7 +57,7 @@ steps:
   - uses: actions/checkout@v4
 
   - name: Prepare node
-    uses: woocommerce/grow/prepare-node@actions-v2
+    uses: woocommerce/grow-test/prepare-node@actions-v2
     with:
       node-version: 18
       cache-dependency-path: "./packages/github-actions"
@@ -71,7 +71,7 @@ steps:
     uses: actions/checkout@v4
 
   - name: Prepare node
-    uses: woocommerce/grow/prepare-node@actions-v2
+    uses: woocommerce/grow-test/prepare-node@actions-v2
     with:
       node-version: "lts/*"
       install-deps: "no"
@@ -88,7 +88,7 @@ steps:
     uses: actions/checkout@v4
 
   - name: Prepare node
-    uses: woocommerce/grow/prepare-node@actions-v2
+    uses: woocommerce/grow-test/prepare-node@actions-v2
     with:
       node-version: "latest"
       ignore-scripts: "no"

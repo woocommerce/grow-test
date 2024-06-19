@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set Labels
-        uses: woocommerce/grow/branch-label@actions-v2
+        uses: woocommerce/grow-test/branch-label@actions-v2
 ```
 
 #### Permissions:
@@ -55,6 +55,6 @@ Ref:
      runs-on: ubuntu-latest
      steps:
        - name: Set Labels
--        uses: woocommerce/grow/branch-label@actions-v1
-+        uses: woocommerce/grow/branch-label@actions-v2
+-        uses: woocommerce/grow-test/branch-label@actions-v1
++        uses: woocommerce/grow-test/branch-label@actions-v2
 ```

@@ -40,7 +40,7 @@ jobs:
           ref: ${{ github.event.release.tag_name }}
 
       - name: Update version tags
-        uses: woocommerce/grow/update-version-tags@actions-v2
+        uses: woocommerce/grow-test/update-version-tags@actions-v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```

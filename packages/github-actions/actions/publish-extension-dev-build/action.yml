@@ -1,7 +1,7 @@
 name: Publish extension development build
 description: Publish or update the extension development build via a pre-release on GitHub
 
-inputs:    
+inputs:
   extension-asset-path:
     description: The extension asset path to find the existing asset for replacement or to upload. It will use the filename to match assets in the target release when finding.
     required: true
@@ -23,7 +23,7 @@ runs:
   steps:
     # Get unreleased notes
     - id: unreleased-notes
-      uses: woocommerce/grow/get-release-notes@actions-v2
+      uses: woocommerce/grow-test/get-release-notes@actions-v2
       with:
         repo-token: ${{ github.token }}
         tag-template: "{version}"

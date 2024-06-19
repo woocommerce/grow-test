@@ -1,6 +1,6 @@
 # Custom GitHub actions
 
-[![GitHub Actions - Release](https://github.com/woocommerce/grow/actions/workflows/github-actions-release.yml/badge.svg)](https://github.com/woocommerce/grow/actions/workflows/github-actions-release.yml)
+[![GitHub Actions - Release](https://github.com/woocommerce/grow-test/actions/workflows/github-actions-release.yml/badge.svg)](https://github.com/woocommerce/grow-test/actions/workflows/github-actions-release.yml)
 
 Custom GitHub actions that help to composite GitHub workflows across the repos maintained by the Grow Team.
 
@@ -74,13 +74,13 @@ All actions involving Node.js are run in v20.
 
 Create a test build on the given branch and commit it to a separate branch with the `-test-build` suffix to facilitate testing and development.
 
-1. Go to Workflow [GitHub Actions - Create Test Build](https://github.com/woocommerce/grow/actions/workflows/github-actions-create-test-build.yml)
+1. Go to Workflow [GitHub Actions - Create Test Build](https://github.com/woocommerce/grow-test/actions/workflows/github-actions-create-test-build.yml)
 1. Manually run the workflow with the target branch.
 1. Wait for the triggered workflow run to complete.
 1. View the summary of the workflow run to use the test build.
 1. Take the branch name `add/my-action` and action path `greet-visitor` as an example:
-   - After a test build is created, it should be able to test the custom action by `woocommerce/grow/greet-visitor@add/my-action-test-build`.
-   - After the `add/my-action` branch is deleted, the Workflow [GitHub Actions - Delete Test Build](https://github.com/woocommerce/grow/actions/workflows/github-actions-delete-test-build.yml) will delete the `my-action-test-build` branch.
+   - After a test build is created, it should be able to test the custom action by `woocommerce/grow-test/greet-visitor@add/my-action-test-build`.
+   - After the `add/my-action` branch is deleted, the Workflow [GitHub Actions - Delete Test Build](https://github.com/woocommerce/grow-test/actions/workflows/github-actions-delete-test-build.yml) will delete the `my-action-test-build` branch.
 
 ### Directory structure of release build
 
@@ -145,7 +145,7 @@ gitGraph
 
 Branch off from the old version, set the merge base for fixing PR to be the same as the old version, and run the release process for that version after merging.
 
-- [v1 source branch](https://github.com/woocommerce/grow/tree/source/actions-v1/packages/github-actions)
+- [v1 source branch](https://github.com/woocommerce/grow-test/tree/source/actions-v1/packages/github-actions)
 
 ## Release
 
@@ -153,7 +153,7 @@ Branch off from the old version, set the merge base for fixing PR to be the same
 
 1. :technologist: Create the specific branch `release/actions` onto the target revision on `trunk` branch.
 1. :octocat: When the branch `release/actions` is created, will continue to commit the release content to `release/actions` branch.
-   - Workflow [GitHub Actions - Prepare New Release](https://github.com/woocommerce/grow/actions/workflows/github-actions-prepare-release.yml)
+   - Workflow [GitHub Actions - Prepare New Release](https://github.com/woocommerce/grow-test/actions/workflows/github-actions-prepare-release.yml)
    - Prepend changelog to [CHANGELOG.md](CHANGELOG.md).
    - Update versions to [package.json](package.json) and [package-lock.json](package-lock.json).
    - Creates a release PR from `release/actions` branch with `trunk` as the base branch.
@@ -164,9 +164,9 @@ Branch off from the old version, set the merge base for fixing PR to be the same
    - If something needs to be revised, append the changes in the release PR.
 1. :technologist: If it's all good, approve the release PR to proceed with the next workflow.
 1. :octocat: Once the release PR is approved, a workflow will create a new release with a new version tag.
-   - Workflow [GitHub Actions - Create Release](https://github.com/woocommerce/grow/actions/workflows/github-actions-create-release.yml)
+   - Workflow [GitHub Actions - Create Release](https://github.com/woocommerce/grow-test/actions/workflows/github-actions-create-release.yml)
 1. :octocat: After publishing the new release, a workflow will continue to create and commit the release build. And then update the references of the corresponding major and minor version tags onto the new release.
-   - Workflow [GitHub Actions - Release](https://github.com/woocommerce/grow/actions/workflows/github-actions-release.yml)
+   - Workflow [GitHub Actions - Release](https://github.com/woocommerce/grow-test/actions/workflows/github-actions-release.yml)
    - When the new release version is `actions-v2.4.8`, it should update the references of `actions-v2` and `actions-v2.4` onto `actions-v2.4.8`.
    - When the new release version is `actions-v2.5.0`, it should update the reference of `actions-v2` and create `actions-v2.5` tag onto `actions-v2.5.0`.
    - When the new release version is `actions-v3.0.0`, it should create `actions-v3` and `actions-v3.0` tags onto `actions-v3.0.0`.
@@ -178,7 +178,7 @@ Branch off from the old version, set the merge base for fixing PR to be the same
 :bulb: To create a test build based on a branch, please refer to the [Create a test build](#create-a-test-build) section.
 
 1. Create a new release with a **prerelease version tag**. For example `actions-vX.Y.Z-pre`.
-1. Check if the ["GitHub Actions - Release" workflow](https://github.com/woocommerce/grow/actions/workflows/github-actions-release.yml) is run successfully.
+1. Check if the ["GitHub Actions - Release" workflow](https://github.com/woocommerce/grow-test/actions/workflows/github-actions-release.yml) is run successfully.
 1. Delete the testing releases and tags once they are no longer in use.
 
 <p align="center">
