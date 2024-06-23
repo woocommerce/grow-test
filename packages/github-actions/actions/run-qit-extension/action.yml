@@ -154,7 +154,4 @@ runs:
       with:
         type: e2e
         extension: ${{ inputs.extension }}
-        extension-file: ${{ env.dev_build }}
-        wait: ${{ inputs.wait }}
-        ignore-fail: ${{ inputs.ignore-fail }}
         options: ${{ inputs.options }}
