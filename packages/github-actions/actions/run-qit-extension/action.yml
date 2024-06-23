@@ -148,7 +148,7 @@ runs:
         ignore-fail: ${{ inputs.ignore-fail }}
         options: ${{ inputs.options }}
 
-    - name: Plugin E2E test
+    - name: Plugin E2E test [upd]
       if: ${{ inputs.test-plugin-e2e == 'true' }}
       uses: woocommerce/grow-test/run-qit-annotate@actions-v2
       with:
