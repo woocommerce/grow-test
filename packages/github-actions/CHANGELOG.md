@@ -1,5 +1,8 @@
 # Changelog
 
+## 2024-06-23 (2.0.1)
+
+
 ## 2024-05-16 (2.0.0)
 ### Breaking Changes 🚨
 * Upgrade the fundamental of the `github-actions` package and its `get-release-notes`, `prepare-node`, and `update-version-tags` actions to use Node.js v20. (https://github.com/woocommerce/grow-test/pull/112)
