@@ -148,20 +148,13 @@ runs:
         ignore-fail: ${{ inputs.ignore-fail }}
         options: ${{ inputs.options }}
 
-    - name: Plugin E2E test
+    - name: Plugin E2E test update
       if: ${{ inputs.test-plugin-e2e == 'true' }}
       shell: bash
       env:
-        # If the custom build is provided, pass it to the `zip` param.
-        zip: ${{ env.dev_build &&  format('--zip={0}', env.dev_build) || '' }}
-        wait: ${{ inputs.wait == 'true' && '--wait' || '' }}
-        ignore_fail: ${{ inputs.ignore-fail == 'true' && '--ignore-fail' || '' }}
         extension: ${{ inputs.extension }}
         options: ${{ inputs.options }}
       run: |
         ./vendor/bin/qit run:e2e \
          $extension \
-         $zip \
-         $options \
-         $wait \
-         $ignore_fail
+         $options
