@@ -148,7 +148,7 @@ runs:
         ignore-fail: ${{ inputs.ignore-fail }}
         options: ${{ inputs.options }}
 
-    - name: Plugin E2E test update
+    - name: Plugin E2E test
       if: ${{ inputs.test-plugin-e2e == 'true' }}
       shell: bash
       env:
